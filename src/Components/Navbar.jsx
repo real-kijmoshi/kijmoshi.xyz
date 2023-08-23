@@ -1,5 +1,3 @@
-import React from "react";
-
 function Navbar({ redirect }) {
   return (
     <nav className="w-full h-10 xs:h-16 bg-[#141414] top-0 flex justify-between items-center sticky">

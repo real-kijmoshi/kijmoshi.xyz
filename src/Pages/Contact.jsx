@@ -1,5 +1,3 @@
-import React from "react";
-
 function Contact({ redirect }) {
   return (
     <div className="w-full">
