@@ -4,13 +4,16 @@ function Contact({ redirect }) {
   return (
     <div className="w-full">
       <div className="flex flex-col mt-5 items-center space-y-8 mx-10">
-        <button
-          className="w-full flex justify-bettwen h-14 w-60 p-3 rounded items-center bg-[#5865F2]"
-          onClick={() => redirect("redirect/discord")}
-        >
-          <img src="/discord.svg" alt="discord" className="h-8" />
-          <p className="text-white ml-2 text-xl">@kijmoshi</p>
-        </button>
+        <div className="w-60">
+          {/* this div exists because discord button have some problems with width */}
+          <button
+            className="w-full flex justify-bettwen h-14 w-60 p-3 rounded items-center bg-[#5865F2]"
+            onClick={() => redirect("redirect/discord")}
+          >
+            <img src="/discord.svg" alt="discord" className="h-8" />
+            <p className="text-white ml-2 text-xl">@kijmoshi</p>
+          </button>
+        </div>
 
         <button
           className="flex justify-bettwen h-14 w-60 p-3 py-6 rounded items-center bg-[#24292E]"

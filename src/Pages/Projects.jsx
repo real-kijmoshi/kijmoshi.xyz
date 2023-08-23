@@ -51,11 +51,12 @@ const projects = [
   },
   {
     name: "fast.db",
-    description: "Simple database for nodejs made with better-sqlite3 for people who don't know sql",
+    description:
+      "Simple database for nodejs made with better-sqlite3 for people who don't know sql",
     github: "https://github.com/real-kijmoshi/fast.db",
     link: "https://npmjs.com/package/@kijmoshi/fast.db",
     tech: ["nodejs", "sqlite"],
-  }
+  },
 ];
 
 function Projects() {
@@ -66,8 +67,11 @@ function Projects() {
           <Project project={p} index={i} />
         ))}
 
-        <div key={"info"} className="text-center w-2/3 m-10 pb-10 text-gray-300" >
-            <h1 className="text-center text-2xl">More projects coming soon!</h1>
+        <div
+          key={"info"}
+          className="text-center w-2/3 m-10 pb-10 text-gray-300"
+        >
+          <h1 className="text-center text-2xl">More projects coming soon!</h1>
         </div>
       </div>
     </div>
