@@ -1,11 +1,4 @@
-import { useEffect, useState } from "react";
-
 function Home() {
-  const [loaded, setLoaded] = useState(false);
-
-  useEffect(() => {
-    setLoaded(true);
-  });
   return (
     <div className="w-screen h-screen">
       <h1 className="text-center">Welcome to my website!</h1>
