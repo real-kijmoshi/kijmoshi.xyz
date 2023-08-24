@@ -10,7 +10,7 @@ function Home() {
     <div className="w-screen h-screen">
       <h1 className="text-center">Welcome to my website!</h1>
 
-      <div className="flex flex-col w-full items-center items-center space-y-2 w-screen">
+      <div className="flex flex-col tect-center w-full items-center items-center space-y-2 w-screen">
         My name is Igor and this is my Portfolio website!
 
         learn more from about tab
