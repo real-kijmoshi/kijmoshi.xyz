@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Project from "../Components/Project";
 
 const projects = [
@@ -60,10 +61,35 @@ const projects = [
 ];
 
 function Projects() {
+  const [search, setSearch] = useState("");
+  const [filteredProjects, setFilteredProjects] = useState(projects);
+
+  const handleChange = (e) => {
+    setSearch(e.target.value);
+
+    const filtered = projects.map((p) => {
+      p.visible =
+        p.name.toLowerCase().includes(search.toLowerCase()) ||
+        p.tech.some((tech) =>
+          tech.toLowerCase().includes(search.toLowerCase())
+        ) ||
+        p.description.toLowerCase().includes(search.toLowerCase());
+      return p;
+    });
+
+    setFilteredProjects(filtered);
+  };
+
   return (
     <div>
+      <input
+        type="text"
+        placeholder="serach"
+        onChange={handleChange}
+        className="ml-4 p-[0.3rem] rounded xs:p-2"
+      />
       <div className="flex felx-col justify-center h-screen w-screen flex-wrap">
-        {projects.map((p, i) => (
+        {filteredProjects.map((p, i) => (
           <Project project={p} index={i} />
         ))}
 
